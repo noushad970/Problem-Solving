@@ -1,13 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main()
-{
-    int n;
-    cin>>n;
-    int a[n];
-    for(int i=0;i<n;i++)
-    cin>>a[i];
-    for(int i=0;i<n;i++)
+int Solution(int a[],int n)
+{   
+for(int i=0;i<n;i++)
     {
         for(int j=i+1;j<n;j++)
         {
@@ -20,6 +15,17 @@ int main()
     {
         sum+=(a[i+1]-a[i]);
     }
+    return sum;
+
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    cin>>a[i];
+    int sum=Solution(a,n);
+    
     cout<<sum<<endl;
 }
-//comments
